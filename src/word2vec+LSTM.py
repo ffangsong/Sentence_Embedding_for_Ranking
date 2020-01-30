@@ -57,7 +57,7 @@ class word2vec_LSTM():
                     if word in stop_words and word not in self.w2v_model.vocab:
                         continue
                     if word not in self.vocabulary:
-                        vocabulary[word] = len(self.inverse_vocabulary)
+                        self.vocabulary[word] = len(self.inverse_vocabulary)
                         q2n.append(len(self.inverse_vocabulary))
                         self.inverse_vocabulary.append(word)
                     else:
