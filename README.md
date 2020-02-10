@@ -1,5 +1,5 @@
-# Top-k most similar sentences
-This repository can be used to build a fast similar sentence retrieval system using sentence corpus.
+# Top-k most similar docs
+This repository can be used to build a fast similar doc retrieval system.
 
 It allows you to 
 
