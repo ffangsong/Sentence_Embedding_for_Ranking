@@ -22,7 +22,7 @@ Download a pre-trained Bert Model, the download example below is BERT-base,
 
 ## Run test
 ## Embedding Model Details
-Two models were trained on a  classification task to learn doc embeddings. 
+Two models were trained on a classification task to learn doc embeddings. 
 * The first model leverages word embedding, Google's pretrained word2vec embedding was used and an LSTM layer was added to capture the long term dependency of words and capture richer semantic information.
 * The second model start with a Bert layer initialized with the pre-trained weights and fine-tuned for the classification task.
 
