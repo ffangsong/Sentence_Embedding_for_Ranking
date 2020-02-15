@@ -4,7 +4,7 @@ This repository is the implelentation of building a document ranking and retriev
 It allows to you to train the sentence embedding system on your own unique corpus, create your own indexed document reposistory and buid a ranking system to  output the top K similar/relavant docs in the repository for a given input query.
 
 
-# Demo:
+## Demo:
 
 
 
