@@ -33,7 +33,7 @@ Download a pre-trained Bert Model, the download example below is BERT-base,
 ## Train Embedding Model Details
 Two models can be trained on a classification task to learn doc embeddings. 
 * The first model leverages pretrained word embedding, please download Google's pretrained model [here](https://s3.amazonaws.com/dl4j-distribution/GoogleNews-vectors-negative300.bin.gz) and put in the ```Docs\Pretrained``` fodler. The word embeddings were them fed into a LSTM layer to capture the long term dependency of the words and thus richer semantic informations. 
-* The second model start with a Bert layer initialized with the pre-trained weights , a pool layer and  and a drop out layer for regularization. During training, the Bert model was fine-tuned for the special input corpus.
+* The second model start with a Bert layer initialized with the pre-trained weights , followed by a pool layer and  and a drop out layey. During training, the Bert model was fine-tuned for the special input corpus.
 
 In both models, a simple cosine similarity metric is used for classification, thus compile the model to learn a better docuemnt  embedding. 
 
