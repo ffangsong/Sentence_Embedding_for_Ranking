@@ -58,11 +58,11 @@ python bert_fine_tune_train.py
 
 ## Indexing and Ranking
 
-To generate the indexed docuemnt repositoty, please run:
+To generate the index, please run:
 ```
 python ./src/indexing.py
 ```
-A indexed will generated and saved at ```docs/indexing ```
+The index will be saved at ```docs/indexing ```
 
 
 ## Run test
