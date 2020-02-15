@@ -1,12 +1,16 @@
-# Sentence-Embedding-for-Ranking
-This project attempts to build a fast document retrieval system using sentence embedding. 
+# Sentence-Embedding-for-Doccument-Ranking
+This repository is the implelentation of building a document ranking and retrieval system using the sentence embedding tailored for your sepecial corpus. 
 
-It allows to find the top K related docs in the repository for a given query.
-The App is runing online at   . 
+It allows to you to train the sentence embedding system on your own unique corpus, create your own indexed document reposistory and buid a ranking system to  output the top K similar/relavant docs in the repository for a given input query.
+
+
+# Demo:
+
 
 
 ## Getting Started:
 Clone this reposistory locally and create a virtual enviroment(conda examples below)
+
 
 Create the environment file from the the provided environment.yaml file
 
