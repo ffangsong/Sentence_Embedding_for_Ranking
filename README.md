@@ -32,14 +32,32 @@ Download a pre-trained Bert Model, the download example below is BERT-base,
 ## Run test
 
 
-## Train Embedding Model Details
+## Embedding Model Details
 Two models can be trained to learn doc embeddings. 
-* The first model leverages pretrained word embedding, please download Google's pretrained model [here](https://s3.amazonaws.com/dl4j-distribution/GoogleNews-vectors-negative300.bin.gz) and put in the ```docs\Pretrained``` fodler. The word embeddings were them fed into a LSTM layer to capture the long term dependency of the words and thus richer semantic informations. 
+* The first model leverages pretrained word embedding. The word embeddings were them fed into a LSTM layer to capture the long term dependency of the words and thus richer semantic informations. 
 * The second model start with a Bert layer initialized with the pre-trained weights , followed by a pool layer and  and a drop out layey. During training, the Bert model was fine-tuned for the special input corpus. Your can download pretrained Bert model [here](https://storage.googleapis.com/bert_models/2018_10_18/uncased_L-12_H-768_A-12.zip) and put in the ```docs\Pretrained```
 
 In both models, a simple cosine similarity metric is used for classification, thus compile the model to learn a better docuemnt  embedding. 
 
 Once the training is completed, the classfication layer is droped,  and the output of the last second layer is used as the embedding. 
+
+## Train model
+To train the word2vec_LSTM model, please download Google's pretrained model [here](https://s3.amazonaws.com/dl4j-distribution/GoogleNews-vectors-negative300.bin.gz) and put in the ```docs\Pretrained\w2v``` folder
+
+To start training:
+```
+cd src/
+python word2vec_LSTM_train.py
+```
+
+To fine tune the Bert model, please download pretrained Bert model [here](https://storage.googleapis.com/bert_models/2018_10_18/uncased_L-12_H-768_A-12.zip), unzip it and put in the ```docs\Pretrained\Bert```
+
+To start training:
+```
+cd src/
+python bert_fine_tune_train.py
+```
+
 
 ## Indexing and Ranking
 
