@@ -10,8 +10,13 @@ It allows to you to train the sentence embedding system on your own unique corpu
 
 ## Getting Started:
 Clone this reposistory locally and create a virtual enviroment(conda examples below)
+```
+git clone https://github.com/ffangsong/Sentence_Embedding_for_Ranking.git
+cd Sentence_Embedding_for_Ranking
+```
 
 
+and make sure you have your dataset in the 
 Create the environment file from the the provided environment.yaml file
 
     conda create python=3.6
