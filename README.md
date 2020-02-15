@@ -30,6 +30,8 @@ Download a pre-trained Bert Model, the download example below is BERT-base,
 ## Usage
 
 ## Run test
+
+
 ## Train Embedding Model Details
 Two models can be trained on a classification task to learn doc embeddings. 
 * The first model leverages pretrained word embedding, please download Google's pretrained model [here](https://s3.amazonaws.com/dl4j-distribution/GoogleNews-vectors-negative300.bin.gz) and put in the ```Docs\Pretrained``` fodler. The word embeddings were them fed into a LSTM layer to capture the long term dependency of the words and thus richer semantic informations. 
@@ -41,7 +43,22 @@ Once the training is completed, the classfication layer is droped,  and the outp
 
 ## Indexing and Ranking
 
-Annoy is used to create searchable index for ranking. 
+To generate the indexed docuemnt repositoty, please run:
+```
+python .\src\indexing.py
+```
+A indexed will generated and saved at ``` .\Docs ```
+
+
+## Run test
+
+To run test on the application, please run:
+```
+python .\src\ranking.py
+```
+
+
+
 
 ## More information about 
 Google's pretrained word2vec model includes word vectors for a vocabulary of 3 million words and phrases that they trained on roughly 100 billion words from a Google News dataset. The vector length is 300 features.
