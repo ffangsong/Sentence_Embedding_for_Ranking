@@ -44,7 +44,7 @@ Once the training is completed, the classfication layer is droped,  and the outp
 ## Train model
 * To train the word2vec_LSTM model, please download Google's pretrained model [here](https://s3.amazonaws.com/dl4j-distribution/GoogleNews-vectors-negative300.bin.gz) and put in the ```docs\Pretrained\w2v``` folder
 
-To start training:
+        To start training:
 ```
 cd src/
 python word2vec_LSTM_train.py
@@ -52,7 +52,7 @@ python word2vec_LSTM_train.py
 
 * To fine tune the Bert model, please download pretrained Bert model [here](https://storage.googleapis.com/bert_models/2018_10_18/uncased_L-12_H-768_A-12.zip), unzip it and put in the ```docs\Pretrained\Bert```
 
-To start training:
+        To start training:
 ```
 cd src/
 python bert_fine_tune_train.py
