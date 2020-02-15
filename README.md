@@ -56,7 +56,7 @@ python bert_fine_tune_train.py
 ```
 
 
-## Indexing and Ranking
+## Indexing 
 
 To generate the index, please run:
 ```
@@ -65,9 +65,9 @@ python ./src/indexing.py
 The index will be saved at ```docs/indexing ```
 
 
-## Run test
+## Run Ranking test
 
-To run test on the application, please run:
+To run test on the ranking application, please run:
 ```
 python ./src/ranking.py
 ```
