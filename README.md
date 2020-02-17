@@ -21,15 +21,9 @@ Create the environment file from the the provided requirement.txt file
     pip install -r requirement.txt
     
 Make sure you have dataset in the ```data``` folder(you can specify the path in the bash script later)    
-## Repository Structure
 
 
-## How to install
-Download a pre-trained Bert Model, the download example below is BERT-base, 
 
-## Usage
-
-## Run test
 
 
 ## Embedding Model Details
