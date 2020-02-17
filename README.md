@@ -1,5 +1,5 @@
 # Sentence-Embedding-for-Doccument-Ranking
-This repository is the implelentation of building a document ranking and retrieval system using the sentence embedding tailored for your sepecial corpus. 
+This repository is the implelentation of building a document ranking and retrieval system using the sentence embedding tailored for your domain specifi corpus. 
 
 It allows to you to train the sentence embedding system on your own unique corpus, create your own indexed document reposistory and buid a ranking system to  output the top K similar/relavant docs in the repository for a given input query.
 
@@ -27,9 +27,9 @@ Make sure you have dataset in the ```data``` folder(you can specify the path in 
 
 
 ## Embedding Model Details
-Two models can be trained to learn doc embeddings. 
-* The first model leverages pretrained word embedding. The word embeddings were them fed into a LSTM layer to capture the long term dependency of the words and thus richer semantic informations. 
-* The second model start with a Bert layer initialized with the pre-trained weights , followed by a pool layer and  and a drop out layey. During training, the Bert model was fine-tuned for the special input corpus. 
+For emebedding model, we used transfer learning to leverage the linguistic information learned by pretrained models:
+* The first model leverages pretrained word embedding. The word embeddings were them fed into a LSTM layer to capture the contexual information and thus obtain a  richer semantic represtion. 
+* The second model start with a BERT layer initialized with the pre-trained weights , followed by a pool layer. During training, the BERT model was fine-tuned for the special corpus. 
 
 ## Train model
 * To train the word2vec_LSTM model, please download Google's pretrained model [here](https://s3.amazonaws.com/dl4j-distribution/GoogleNews-vectors-negative300.bin.gz) and put in the ```docs/pretrained``` folder. To start training:
