@@ -6,7 +6,7 @@ It allows to you to train the sentence embedding system on your own unique corpu
 
 ## Demo:
 
-
+![](demo.gif)
 
 ## Getting Started:
 Clone this reposistory locally and create a virtual enviroment(conda examples below)
