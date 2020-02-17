@@ -65,4 +65,4 @@ python src/ranking.py
 ## More information about Word2Vec and BERT
 Google's pretrained word2vec model includes word vectors for a vocabulary of 3 million words and phrases that they trained on roughly 100 billion words from a Google News dataset. The vector length is 300 features.
 
-BERT builds on top of a number of clever ideas that have been bubbling up in the NLP community, use semi-supervized training on large amounts of text(book, wikipedia,etc). BERT has language-processing abilities capable of empowering many models we later  need to build and train in a supervised way.  
+BERT builds on top of a number of clever ideas that have been responsible for many of the recent advances in NLP, including the transformer architecture and semi-supervized pre-training on large amounts of text(book, wikipedia,etc). BERT is pre-trained on two tasks: masked language modeling and next sentence prediction. It has language-processing abilities capable of empowering many models we later need to build and train in a supervised way.  
