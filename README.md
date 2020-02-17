@@ -37,10 +37,6 @@ Two models can be trained to learn doc embeddings.
 * The first model leverages pretrained word embedding. The word embeddings were them fed into a LSTM layer to capture the long term dependency of the words and thus richer semantic informations. 
 * The second model start with a Bert layer initialized with the pre-trained weights , followed by a pool layer and  and a drop out layey. During training, the Bert model was fine-tuned for the special input corpus. 
 
-In both models, a simple cosine similarity metric is used for classification, thus compile the model to learn a better docuemnt  embedding. 
-
-Once the training is completed, the classfication layer is droped,  and the output of the last second layer is used as the embedding. 
-
 ## Train model
 * To train the word2vec_LSTM model, please download Google's pretrained model [here](https://s3.amazonaws.com/dl4j-distribution/GoogleNews-vectors-negative300.bin.gz) and put in the ```docs/pretrained``` folder. To start training:
 ```
