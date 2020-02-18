@@ -7,6 +7,7 @@ from gensim.models import KeyedVectors
 from nltk import word_tokenize
 from nltk.corpus import stopwords
 from nltk.stem import WordNetLemmatizer
+from string import punctuation
 
 nltk.download('stopwords')
 nltk.download('wordnet')
@@ -19,8 +20,8 @@ from keras.optimizers import Adadelta
 from keras.models import Model
 from keras.preprocessing.sequence import pad_sequences
 
-DATA_FILE_PATH = '~/Documents/Insight/test_python.csv'
-EMBEDDING_FILE_PATH = '~/Documents/Insight/Project/word2vec/GoogleNews-vectors-negative300.bin.gz'
+DATA_FILE_PATH = './data/train_data.txt'
+EMBEDDING_FILE_PATH = './docs/pretrained/GoogleNews-vectors-negative300.bin.gz'
 EMBEDDING_DIM = 300
 MAX_SEQ_LENGTH = 130
 GRADIENT_CLIPPING_NORM = 1.25
@@ -37,7 +38,7 @@ class word2vec_LSTM():
 
     def load_dataset(self):
         ''' load_dataset '''
-        df = pd.read_csv(DATA_FILE_PATH, header=0, sep=',').dropna()
+        df = pd.read_csv(DATA_FILE_PATH, header=0, sep=' ').dropna()
         return df
 
     def text_to_word(self, text):
@@ -73,9 +74,13 @@ class word2vec_LSTM():
         text = re.sub(r"e - mail", "email", text)
         text = re.sub(r"j k", "jk", text)
         text = re.sub(r"\s{2,}", " ", text)
+        text = re.sub('[0-9]+\.[0-9]+', " 87 ", text)
+        # Remove punctuation from text
+        text = ''.join([c for c in text if c not in punctuation]).lower()
+        # Lemmatize
         lemmatizer = WordNetLemmatizer()
         text = str(text)
-        text = str(text)
+    
         # split text into individual words''
         words = word_tokenize(text)
         # Lemmatize
