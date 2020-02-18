@@ -34,7 +34,7 @@ For emebedding model, I used transfer learning to leverage the pretrained models
 * The first model leverages pretrained word embedding, then use a LSTM layer to capture the contexual information and thus a  richer semantic representation. 
 * The second model leverages pretrained BERT model, a deep bidirectional transformer.  The BERT layer  was initialized with the pre-trained weights, followed by a pool layer, and the weights were fine-tuned for the special corpus during training. 
 
-## Train the model
+## Train the Embedding model
 * To train the word2vec_LSTM model, please download Google's pretrained model [here](https://s3.amazonaws.com/dl4j-distribution/GoogleNews-vectors-negative300.bin.gz) and put in the ```docs/pretrained``` folder. To start training:
 ```
 cd src/
