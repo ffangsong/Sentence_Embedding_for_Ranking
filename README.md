@@ -24,7 +24,7 @@ Make sure you have dataset in the ```data``` folder(you can specify the path in 
 
 ## Architecture
 
-![](/docs/Architecure.png)
+![](docs/Architecure.png)
 
 
 
