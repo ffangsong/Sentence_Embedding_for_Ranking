@@ -53,6 +53,7 @@ After training, the checkpoints will be saved at ```docs/model_checkpoint/```
 
 To generate the index, please put your docs at```data/ ```  and run:
 ```
+python src/encoder.py
 python src/indexing.py
 ```
 The index will be saved at ```docs/ ```
