@@ -15,7 +15,7 @@ git clone https://github.com/ffangsong/Sentence_Embedding_for_Ranking.git
 cd Sentence_Embedding_for_Ranking
 ```
 
-Create the environment file from the the provided requirement.txt file
+Create the environment from the the provided requirement.txt file
 
     conda create python=3.6
     pip install -r requirement.txt
