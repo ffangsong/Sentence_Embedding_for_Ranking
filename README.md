@@ -1,4 +1,4 @@
-# Sentence-Embedding-for-Doccument-Ranking
+# Sentence Embedding for Document Ranking
 This repository contains the implelentation of building a document ranking system using the sentence embeddings tailored for your domain specific corpora. 
 
 It allows to you to train the sentence embedding system on your own unique corpus, create your own indexed document reposistory and buid a ranking system to output the top K most similar/relavant docs for a given input query.
@@ -6,7 +6,7 @@ It allows to you to train the sentence embedding system on your own unique corpu
 
 ## Demo:
 
-![](demo.gif)
+![](images/demo.gif)
 
 ## Getting Started:
 Clone this reposistory locally
@@ -24,7 +24,7 @@ Make sure you have dataset in the ```data``` folder(you can specify the path in 
 
 ## Architecture
 
-![](docs/Architecure.png)
+![](images/Architecture.png)
 
 
 
