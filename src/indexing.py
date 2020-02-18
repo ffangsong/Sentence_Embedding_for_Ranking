@@ -1,21 +1,8 @@
 import pandas as pd
 import json
 import csv
-from sentence_transformers import SentenceTransformer
 from annoy import AnnoyIndex
 
-
-    
-def encode():
-    q_df = pd.read_csv('./data/doc_repository.txt', delimiter = ' ').dropna()
-    q_df.columns = ['question']
-    uni_q = q_df['question'].unique().tolist()
-    encoder = SentenceTransformer('bert-base-nli-mean-tokens')
-    q_embedding = encoder.encode(uni_q)
-    embedding_df = pd.DataFrame(q_embedding)
-    question_embedding_df = q_df.merge(embedding_df,left_index = True,right_index = True)
-    question_embedding_df.to_csv('./docs/question_embedding.csv',index =False, header = False)
-    return
 
 def build_index():
     f = 768
