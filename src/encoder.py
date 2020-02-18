@@ -52,7 +52,7 @@ def get_input_matrix(tokens):
         segment_ids.append(segment_id)
     return input_ids, input_masks, segment_ids
 
-def encode(q_list):
+def encode( ):
     tokenizer = bert_tokenization.FullTokenizer(vocab_file=BERT_VOCAB, do_lower_case=True)
     inferModel = load_model('docs／saved_model.hdf5', custom_objects={'KerasLayer':hub.KerasLayer})
     embedding_model = Model(inputs= inferModel.inputs, outputs = inferModel.layers[6].output[0])
@@ -69,3 +69,6 @@ def encode(q_list):
     question_embedding_df = q_df.merge(embedding_df,left_index = True,right_index = True)
     question_embedding_df.to_csv('./docs/question_embedding.csv',index =False, header = False)
     return
+
+if __name__ == '__main__':
+    encode()
