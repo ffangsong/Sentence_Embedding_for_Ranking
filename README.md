@@ -22,7 +22,9 @@ Create the environment file from the the provided requirement.txt file
     
 Make sure you have dataset in the ```data``` folder(you can specify the path in the train script later)    
 
+## Architecture
 
+![](/docs/Architecure.png)
 
 
 
