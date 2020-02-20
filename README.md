@@ -36,7 +36,7 @@ For emebedding model, I used transfer learning to leverage the pretrained models
 
 I restricted the classification to rely on a simple cosine similarity metric to compel the model to learn a better text representation.
 
-After the training is done, the classification layer is dropped and the output of the 2nd last is used as the text embedding. 
+After the training is complete, the classification layer is dropped and the output of the 2nd last layer is used as the text embedding. 
 
 ## Train the Embedding model
 * To train the word2vec_LSTM model, please download Google's pretrained model [here](https://s3.amazonaws.com/dl4j-distribution/GoogleNews-vectors-negative300.bin.gz) and put in the ```docs/pretrained``` folder. To start training:
