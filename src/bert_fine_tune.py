@@ -105,10 +105,8 @@ class bert_fine_tune():
         pooled_output_left, sequence_output_left = bert_layer([input_ids_left, input_masks_left, segment_ids_left])
         pooled_output_right, sequence_output_right = bert_layer([input_ids_right, input_masks_right, segment_ids_right])
         y = tf.keras.layers.Concatenate()([pooled_output_left, pooled_output_right])
-        y = tf.keras.layers.Dropout(0.2)(y)
         pred = tf.keras.layers.Lambda(function=lambda x: exponent_neg_manhattan_distance(x[0], x[1]),output_shape=lambda x: (x[0][0], 1))([pooled_output_left, pooled_output_right])
-        #y = tf.keras.layers.Dropout(0.2)(y)
-        #pred = tf.keras.layers.Dense(1, activation='sigmoid')(y)
+
         
         model = Model(inputs=[input_ids_left, input_masks_left, segment_ids_left,input_ids_right, input_masks_right, segment_ids_right], outputs=[pred])
         model.compile(optimizer=tf.keras.optimizers.Adam(learning_rate=1e-5, ),loss="binary_crossentropy",
